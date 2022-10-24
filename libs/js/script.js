@@ -9,12 +9,14 @@ lines.addEventListener('click', () => {
     lines.classList.toggle('active')
     navList.style.transition = '300ms'
 
+
     if (lines.classList.contains('active')) {
         navList.style.top = '130px'
     } else {
         navList.style.top = '-100%'
     }
 })
+
 
 var swiper = new Swiper(".mySwiper", {
     pagination: {
