@@ -21,7 +21,7 @@
 }
 
 body {
-    background: var(--body);
+    background: #ECECEC;
     font-family: 'Montserrat';
 }
 
@@ -436,7 +436,6 @@ ul {
         font-family: 'Open Sans';
         position: relative;
         z-index: 2;
-        padding: 0 0 0 4rem;
         color: #CB2128;
     }
 
@@ -478,7 +477,7 @@ ul {
         position: relative;
         z-index: 2;
         color: var(--textOff);
-        padding: 4rem 4rem 1.5rem 4rem;
+        padding: 4rem 4rem 1.5rem 0rem;
     }
 
     &__title {
@@ -502,7 +501,7 @@ ul {
                 z-index: -1;
                 width: 100%;
                 height: 50px;
-                background: url('../img/traced.jpg') no-repeat center center / contain;
+                background: url('../img/traced.svg') no-repeat center center / contain;
             }
         }
 
@@ -513,6 +512,73 @@ ul {
 
 .service {
     margin-top: 18rem;
+
+    &__cards {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        column-gap: 2rem;
+        margin-top: 7rem;
+    }
+
+    &__grid {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 2rem;
+
+        &-info {
+            position: absolute;
+            left: 2.8rem;
+            top: 3.3rem;
+            font-weight: 700;
+            font-size: 3.2rem;
+            line-height: 3.2rem;
+        }
+
+        &-card {
+            position: relative;
+            border-radius: 2rem;
+
+
+            &:hover {
+                & .service__top-info {
+                    color: white;
+                    background-image: radial-gradient(circle, #13b5d4, #8954a0);
+                    background-clip: text;
+                    -webkit-text-fill-color: white;
+                    -webkit-text-stroke: 0.08rem transparent;
+                    filter: drop-shadow(0.05rem 0.05rem rgba(#CB2128,  0.2));
+                }
+            }
+
+            & img {
+                border-radius: 2rem;
+            }
+
+            &-off {
+                position: absolute;
+                left: 0;
+                top: 0;
+                transition: .3s;
+                cursor: pointer;
+
+                &:hover {
+                    opacity: 0;
+
+                    & .service__top-info {
+                        filter: invert(50);
+                    }
+                }
+            }
+        }
+    }
 
     &__title {
         font-weight: 700;
@@ -538,7 +604,7 @@ ul {
             transform: translateY(-50%);
             width: 18rem;
             height: 6rem;
-            background: url('../img/traced.jpg') no-repeat center center / contain;
+            background: url('../img/traced.svg') no-repeat center center / contain;
         }
     }
 
@@ -561,12 +627,12 @@ ul {
 
         &-off {
             z-index: 2;
+            border-radius: 2rem;
             cursor: pointer;
-
-
         }
 
         &-on {
+            border-radius: 2rem;
             z-index: 1;
         }
 
@@ -597,3 +663,4 @@ ul {
         }
     }
 }
+@import './responsive-serve.scss';
