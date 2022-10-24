@@ -1,0 +1,123 @@
+// @media(prefers-color-scheme: dark) {
+//     :root {
+//         --textOff: #000000;
+//         --body: #000000;
+//     }
+// }
+
+@media(max-width: 1320px) {
+    .header__list {
+        column-gap: 4rem;
+    }
+}
+
+@media(max-width: 1140px) {
+    .header__nav {
+        font-size: 1.4rem;
+    }
+
+    .header__list {
+        column-gap: 2rem;
+    }
+}
+
+@media(max-width: 990px) {
+    .header__list {
+        column-gap: 0;
+        row-gap: 1rem;
+        flex-direction: column;
+        position: fixed;
+        left: 50%;
+        top: -100%;
+        display: flex;
+        background: #D7D7D7;
+        width: 100%;
+        max-width: 50rem;
+        height: 50rem;
+        transform: translateX(-50%);
+    }
+
+    .header__link {
+        color: #000000;
+    }
+
+    .lines {
+        display: block;
+
+    }
+
+    .header__contact {
+        margin-right: 6rem;
+    }
+
+    .logo-none {
+        display: block;
+    }
+
+    .nav__container {
+        display: flex;
+        flex-direction: row;
+        padding: 0 1.5rem;
+    }
+
+    .header__divider {
+        display: block;
+        margin-left: 10rem;
+        width: 100%;
+        max-width: 16.8rem;
+    }
+
+    .header__item {
+        &:not(:first-of-type) {
+            padding-left: 10rem;
+
+        }
+    }
+
+    .header__contact-num {
+        color: white;
+    }
+}
+
+@media(max-width: 768px) {
+    .lines {
+        position: relative;
+        width: 100%;
+        cursor: pointer;
+        height: 100%;
+        right: 0;
+        display: block;
+    }
+
+    .header__contact {
+        display: none;
+    }
+
+    .nav__container {
+        flex-direction: row-reverse;
+    }
+
+    .header__link {
+        color: black;
+        font-size: 2rem;
+        line-height: 2.4rem;
+        position: relative;
+
+        &:hover {
+            padding-left: 2rem;
+        }
+
+
+        &:first-of-type {
+            display: flex;
+            align-items: center;
+            column-gap: .8rem;
+        }
+    }
+
+
+
+    .logo-name-none {
+        display: block;
+    }
+}

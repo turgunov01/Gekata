@@ -1,0 +1,81 @@
+@media(max-width: 1140px) {
+    .about {
+        &__texts {
+            margin-bottom: 6rem;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 45rem;
+                height: 45rem;
+                background: url("../img/logo.svg") no-repeat center center/cover;
+                left: 25%;
+                top: 100%;
+                transform: translateY(-50%) translateX(50%);
+                z-index: 0;
+                opacity: 0.3;
+                filter: blur(5px);
+            }
+
+            &::after {
+                width: 100%;
+                background: #373E46;
+                height: 35rem;
+                left: 0;
+                top: 0;
+                z-index: 1;
+                border-radius: 2rem;
+                display: none;
+            }
+        }
+
+        &__main {
+            flex-direction: column;
+            background: #373E46;
+            border-radius: 2rem;
+            padding: 5rem;
+            overflow: hidden;
+        }
+
+        &__title {
+            &-text {
+                margin-bottom: 3rem;
+            }
+        }
+
+        &__more {
+            padding: 0;
+        }
+
+        &__text {
+            padding: 0;
+        }
+
+        &__view {
+            padding-left: 0;
+            padding-top: 0;
+            width: 100%;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 98%;
+                height: 96%;
+                left: 2%;
+                top: 3%;
+                background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
+            }
+
+            &-image {
+                width: 100%;
+                padding-left: 2rem;
+                padding-top: 2rem;
+            }
+        }
+
+    }
+
+    .new_stroke {
+        display: none;
+    }
+}
